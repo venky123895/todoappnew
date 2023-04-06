@@ -1,0 +1,36 @@
+.text{
+    margin-bottom: 25px;
+}
+.inp{
+    width: 300px ;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    background-color: lightblue;
+    /* color: green; */
+    margin-right: 10px;
+    border: 2px solid blue;
+    outline: none;
+    color: blue;
+}
+.text{
+    color: green;
+    font-size: 30px;
+  
+}
+.but{
+    width: 100px;
+    height: 30px;
+    background-color: blue;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+   
+}
+.but:hover{
+    border: 2px solid black;
+    background-color: white;
+    color: blue;
+    transition: 0.4s;
+}
