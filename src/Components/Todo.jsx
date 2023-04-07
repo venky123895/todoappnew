@@ -1,23 +1,28 @@
-import React, { createContext, useEffect, useState } from 'react'
+import React, { createContext , useState, useEffect } from 'react'
 import './todo.css'
 import TodoItem from './TodoItem'
 export const GlobalData=createContext();
 const Todo = () => {
     const[data,setData]=useState("");
     const[todo,addToDo]=useState([]);
-    const[count,setCount]=useState([]);
+    const[count,setCount]=useState([])
+
 
 
     useEffect(() => {
-
-        const noOfTaks=todo.filter((ele)=>{
-            return ele.toggle === true
-          })
-          setCount(noOfTaks)
+            var completedTasks=todo.filter((ele,i)=>{
+                        return ele.toggle === true
+                    })
+                    setCount(completedTasks)   
+    },[todo])
     
-    })
-    
-      
+//    const noOfCompleted=(index)=>{
+//     var completedTasks=todo.map((ele,i)=>{
+//         return ele.toggle === true
+//     })
+//     setCount(completedTasks)
+//    }
+//    noOfCompleted()
     
     
 
@@ -35,13 +40,9 @@ const Todo = () => {
         
     }
 
-    // const updateTask=(index)=>{
-    //     var newUpdate=todo.map((ele,i)=>{
-    //         if(index===i){
-                
-    //         }
-    //     })
-    // }
+  
+
+ 
 
     const handleToggle=(index)=>{
        var newArray=todo.map((ele,i)=>{
